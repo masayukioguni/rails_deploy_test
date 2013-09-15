@@ -7,8 +7,8 @@ set :application, "rails_deploy_test"
 set :scm, :git
 set :repository,  "https://github.com/masayukioguni/rails_deploy_test.git"
 
-set :use_sudo, true
-set :deploy_via, :checkout
+set :use_sudo, false
+set :deploy_via, :copy
 set :git_shallow_clone, 1
 set :rvm_ruby_string, 'ruby-2.0.0-p247'
 
