@@ -30,3 +30,4 @@ set :default_environment, {
   #'GEM_PATH'     => '/path/to/.rvm/gems/ree-1.8.7-2010.01',
   #'BUNDLE_PATH'  => '/path/to/.rvm/gems/ree-1.8.7-2010.01'  # If you are using bundler.
 }
+default_environment['GIT_SSL_NO_VERIFY'] = 'true'
