@@ -22,8 +22,6 @@ role :web, host
 role :app, host
 role :db,  host, :primary => true
 
-
-
 set :default_environment, {
   'FFFFFFFFFFF' => "dsfmslfmlsmdfmsklmfsmdkfm"
   #'PATH' => "/path/to/.rvm/gems/ree/1.8.7/bin:/path/to/.rvm/bin:/path/to/.rvm/ree-1.8.7-2009.10/bin:$PATH",

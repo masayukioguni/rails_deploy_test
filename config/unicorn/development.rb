@@ -15,6 +15,7 @@ GC.respond_to?(:copy_on_write_friendly=) and
   GC.copy_on_write_friendly = true
 check_client_connection false
 
+system('source /home/deploy/.rails_env')
 
 require 'syslog'
 Syslog.open("syslogtest")
