@@ -17,6 +17,7 @@ Syslog.log(Syslog::LOG_WARNING, "unicorn.rb ")
 Syslog.close
 
 ENV.each {|k,v|
+  
   p "ENV param #{k}=#{v}"
   Syslog.open("syslogtest")
   Syslog.log(Syslog::LOG_WARNING, "ENV param %s=%s", k,v)
