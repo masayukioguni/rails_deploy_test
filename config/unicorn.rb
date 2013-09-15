@@ -11,6 +11,13 @@ pid File.join(RAILS_ROOT, "tmp/pids/unicorn.pid")
 stderr_path File.join(RAILS_ROOT, "log/unicorn.stderr.log")
 stdout_path File.join(RAILS_ROOT, "log/unicorn.stdout.log")
 
+ENV.each {|k,v|
+ p "ENV param #{k}=#{v}"
+ Syslog.open("syslogtest")
+ Syslog.log(Syslog::LOG_WARNING, "ENV param %k=%v", k,v)
+ Syslog.close
+}
+
 preload_app true
 GC.respond_to?(:copy_on_write_friendly=) and
   GC.copy_on_write_friendly = true
