@@ -1,4 +1,4 @@
-RAILS_ROOT = File.expand_path('../../', File.dirname(__FILE__))
+RAILS_ROOT = File.expand_path('../', File.dirname(__FILE__))
 working_directory RAILS_ROOT
 
 listen File.join(RAILS_ROOT, "tmp/pids/unicorn.sock"), :backlog => 64
