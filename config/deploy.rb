@@ -17,7 +17,7 @@ set :bundle_without, [:test]
 default_run_options[:pty] = true
 set :ssh_options, { :forward_agent => true }
 
-host =  "ec2-54-200-3-110.us-west-2.compute.amazonaws.com"
+host =  "ec2-54-200-47-184.us-west-2.compute.amazonaws.com"
 role :web, host
 role :app, host
 role :db,  host, :primary => true
