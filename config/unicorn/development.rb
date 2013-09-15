@@ -16,6 +16,10 @@ GC.respond_to?(:copy_on_write_friendly=) and
 check_client_connection false
 
 
+Syslog.open("syslogtest")
+ Syslog.log(Syslog::LOG_WARNING, "config/unicorn/deveplopment.rb ")
+ Syslog.close
+
 before_fork do |server, worker|
   defined?(ActiveRecord::Base) and
     ActiveRecord::Base.connection.disconnect!

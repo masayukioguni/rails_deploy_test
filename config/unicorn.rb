@@ -11,6 +11,10 @@ pid File.join(RAILS_ROOT, "tmp/pids/unicorn.pid")
 stderr_path File.join(RAILS_ROOT, "log/unicorn.stderr.log")
 stdout_path File.join(RAILS_ROOT, "log/unicorn.stdout.log")
 
+Syslog.open("syslogtest")
+Syslog.log(Syslog::LOG_WARNING, "unicorn.rb ")
+Syslog.close
+
 ENV.each {|k,v|
  p "ENV param #{k}=#{v}"
  Syslog.open("syslogtest")
