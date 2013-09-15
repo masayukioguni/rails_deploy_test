@@ -21,6 +21,7 @@ host =  "ec2-54-200-47-184.us-west-2.compute.amazonaws.com"
 role :web, host
 role :app, host
 role :db,  host, :primary => true
+#default_run_options[:shell] = 'bash -l'
 
 #set :default_environment, {
 #  'FFFFFFFFFFF' => "dsfmslfmlsmdfmsklmfsmdkfm"
