@@ -4,7 +4,7 @@ require 'bundler/capistrano'
 set :application, "rails_deploy_test"
 
 set :scm, :git
-set :repository,  "git@github.com:masayukioguni/rails_deploy_test.git"
+set :repository,  "https://github.com/masayukioguni/rails_deploy_test.git"
 
 set :use_sudo, true
 set :deploy_via, :checkout
